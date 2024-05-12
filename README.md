@@ -6,7 +6,7 @@ Studify is a Spotify-inspired app designed for students to create personalized s
 You need to install the following dependencies to run the project
 
 ```bash
-npm install 
+npm install --force
 ```
 
 ## Logging in using Spotify Authentication
