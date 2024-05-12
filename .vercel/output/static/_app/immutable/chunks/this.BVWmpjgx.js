@@ -1,0 +1,1 @@
+import{e as S,r as h,u as k,q,S as x}from"./runtime.DDjRgbeA.js";function u(r,f){var t;var i=r&&((t=r[x])==null?void 0:t.t);return r===f||i===f}function b(r,f,i,t){S(()=>{var a,s;return h(()=>{a=s,s=[],k(()=>{r!==i(...s)&&(f(r,...s),a&&u(i(...a),r)&&f(null,...a))})}),()=>{q(()=>{s&&u(i(...s),r)&&f(null,...s)})}})}export{b};
