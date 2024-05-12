@@ -1,38 +1,28 @@
-# create-svelte
+# Studify
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+Studify is a Spotify-inspired app designed for students to create personalized study playlists, discover trending music and albums, and find the perfect soundtrack for their study sessions.
 
 ## Creating a project
-
-If you're seeing this, you've probably already done this step. Congrats!
+You need to install the following dependencies to run the project
 
 ```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
+npm install pkce-gen spotify-api@0.0.25 lucide-svelte @fontsource/metropolis nodemon tailwindcss @unsass/breakpoint@2.4.0 modern-normalize@2.0.0 nprogress
 ```
 
-## Developing
+## Logging in using Spotify Authentication
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+To be able to access the app you may use this spotify cedentials, or your own credentials (to show your customized playlists)
+
+```bash
+Email: rzuhime.habbo@gmail.com
+Password: Password123
+```
+
+## Starting the server
+
+run npm run dev to start the project
 
 ```bash
 npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
 ```
 
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.

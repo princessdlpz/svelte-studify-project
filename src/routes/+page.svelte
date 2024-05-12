@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { cover } from '$assets/cover.png';
 	import { Button, Card } from '$components';
 	import type { PageData } from './$types';
 
@@ -44,8 +43,6 @@
 			});
 		}
 	}
-	console.log();
-	
 </script>
 
 {#each sections as section}
