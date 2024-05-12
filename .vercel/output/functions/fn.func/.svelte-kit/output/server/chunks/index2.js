@@ -1,15 +1,12 @@
-import { q as noop } from "./index3.js";
+import { n as noop, j as safe_not_equal } from "./ssr.js";
 const subscriber_queue = [];
 function readable(value, start) {
   return {
     subscribe: writable(value, start).subscribe
   };
 }
-function safe_not_equal(a, b) {
-  return a != a ? b == b : a !== b || a && typeof a === "object" || typeof a === "function";
-}
 function writable(value, start = noop) {
-  let stop = null;
+  let stop;
   const subscribers = /* @__PURE__ */ new Set();
   function set(new_value) {
     if (safe_not_equal(value, new_value)) {
@@ -30,10 +27,7 @@ function writable(value, start = noop) {
     }
   }
   function update(fn) {
-    set(fn(
-      /** @type {T} */
-      value
-    ));
+    set(fn(value));
   }
   function subscribe(run, invalidate = noop) {
     const subscriber = [run, invalidate];
@@ -41,10 +35,7 @@ function writable(value, start = noop) {
     if (subscribers.size === 1) {
       stop = start(set, update) || noop;
     }
-    run(
-      /** @type {T} */
-      value
-    );
+    run(value);
     return () => {
       subscribers.delete(subscriber);
       if (subscribers.size === 0 && stop) {

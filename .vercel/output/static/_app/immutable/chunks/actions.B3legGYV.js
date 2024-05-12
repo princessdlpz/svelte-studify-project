@@ -1,1 +1,0 @@
-import{e as c,u as n,r as i,b as o}from"./runtime.DDjRgbeA.js";function m(e,a,f){c(()=>{var r=n(()=>a(e,f==null?void 0:f())||{});if(f&&(r!=null&&r.update)){var s=!1;i(()=>{var t=f();o(t),s&&r.update(t)}),s=!0}if(r!=null&&r.destroy)return()=>r.destroy()})}export{m as a};

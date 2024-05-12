@@ -1,4 +1,4 @@
-import { t as getContext } from "./index3.js";
+import { p as getContext } from "./ssr.js";
 import "./HeaderNav.svelte_svelte_type_style_lang.js";
 const getStores = () => {
   const stores = getContext("__svelte__");

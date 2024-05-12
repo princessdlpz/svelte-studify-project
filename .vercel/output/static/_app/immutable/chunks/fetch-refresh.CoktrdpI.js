@@ -1,1 +1,0 @@
-import{e as i}from"./index.DJuFnhGY.js";async function t(r,e){const s=await r(e);if(s.status===401){if(window.refreshPromise||(window.refreshPromise=r("/api/auth/refresh").finally(()=>{window.refreshPromise=null})),!(await window.refreshPromise).ok)throw i(401,"Session Expired!");return r(e)}else return s}export{t as f};

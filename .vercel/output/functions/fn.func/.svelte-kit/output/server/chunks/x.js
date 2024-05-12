@@ -1,28 +1,13 @@
-import { c as spread_props, b as pop, d as slot, e as sanitize_props, p as push } from "./index3.js";
+import { c as create_ssr_component, v as validate_component } from "./ssr.js";
 import { I as Icon } from "./Icon.js";
-function X($$payload, $$props) {
-  const $$sanitized_props = sanitize_props($$props);
-  push();
-  const iconNode = [
-    ["path", { "d": "M18 6 6 18" }],
-    ["path", { "d": "m6 6 12 12" }]
-  ];
-  $$payload.out += `<!--[-->`;
-  Icon($$payload, spread_props([
-    { name: "x" },
-    $$sanitized_props,
-    {
-      iconNode,
-      children: ($$payload2, $$slotProps) => {
-        $$payload2.out += `<!--[-->`;
-        slot($$payload2, $$props.children, {});
-        $$payload2.out += `<!--]-->`;
-      }
+const X = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  const iconNode = [["path", { "d": "M18 6 6 18" }], ["path", { "d": "m6 6 12 12" }]];
+  return `${validate_component(Icon, "Icon").$$render($$result, Object.assign({}, { name: "x" }, $$props, { iconNode }), {}, {
+    default: () => {
+      return `${slots.default ? slots.default({}) : ``}`;
     }
-  ]));
-  $$payload.out += `<!--]-->`;
-  pop();
-}
+  })}`;
+});
 export {
   X
 };

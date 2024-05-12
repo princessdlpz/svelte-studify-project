@@ -1,4 +1,5 @@
-import { n as rest_props, v as value_or_fallback, f as ensure_array_like, o as spread_attributes, w as element, d as slot, m as bind_props, b as pop, e as sanitize_props, p as push } from "./index3.js";
+import { c as create_ssr_component, g as compute_rest_props, h as spread, i as escape_object, q as escape_attribute_value, e as each } from "./ssr.js";
+import { i as is_void } from "./HeaderNav.svelte_svelte_type_style_lang.js";
 /**
  * @license lucide-svelte v0.378.0 - ISC
  *
@@ -16,79 +17,60 @@ const defaultAttributes = {
   "stroke-linecap": "round",
   "stroke-linejoin": "round"
 };
-function Icon($$payload, $$props) {
-  const $$sanitized_props = sanitize_props($$props);
-  const $$restProps = rest_props($$sanitized_props, [
-    "mergeClasses",
+const Icon = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  let $$restProps = compute_rest_props($$props, [
     "name",
     "color",
     "size",
     "strokeWidth",
     "absoluteStrokeWidth",
-    "iconNode"
+    "iconNode",
+    "mergeClasses"
   ]);
-  push();
-  let name = value_or_fallback($$props["name"], () => void 0);
-  let color = value_or_fallback($$props["color"], () => "currentColor");
-  let size = value_or_fallback($$props["size"], () => 24);
-  let strokeWidth = value_or_fallback($$props["strokeWidth"], () => 2);
-  let absoluteStrokeWidth = value_or_fallback($$props["absoluteStrokeWidth"], () => false);
-  let iconNode = $$props["iconNode"];
+  let { name = void 0 } = $$props;
+  let { color = "currentColor" } = $$props;
+  let { size = 24 } = $$props;
+  let { strokeWidth = 2 } = $$props;
+  let { absoluteStrokeWidth = false } = $$props;
+  let { iconNode } = $$props;
   const mergeClasses = (...classes) => classes.filter((className, index, array) => {
     return Boolean(className) && array.indexOf(className) === index;
   }).join(" ");
-  const each_array = ensure_array_like(iconNode);
-  $$payload.out += `<svg${spread_attributes(
+  if ($$props.name === void 0 && $$bindings.name && name !== void 0)
+    $$bindings.name(name);
+  if ($$props.color === void 0 && $$bindings.color && color !== void 0)
+    $$bindings.color(color);
+  if ($$props.size === void 0 && $$bindings.size && size !== void 0)
+    $$bindings.size(size);
+  if ($$props.strokeWidth === void 0 && $$bindings.strokeWidth && strokeWidth !== void 0)
+    $$bindings.strokeWidth(strokeWidth);
+  if ($$props.absoluteStrokeWidth === void 0 && $$bindings.absoluteStrokeWidth && absoluteStrokeWidth !== void 0)
+    $$bindings.absoluteStrokeWidth(absoluteStrokeWidth);
+  if ($$props.iconNode === void 0 && $$bindings.iconNode && iconNode !== void 0)
+    $$bindings.iconNode(iconNode);
+  if ($$props.mergeClasses === void 0 && $$bindings.mergeClasses && mergeClasses !== void 0)
+    $$bindings.mergeClasses(mergeClasses);
+  return `<svg${spread(
     [
-      defaultAttributes,
-      $$restProps,
-      { "width": size },
-      { "height": size },
-      { "stroke": color },
+      escape_object(defaultAttributes),
+      escape_object($$restProps),
+      { width: escape_attribute_value(size) },
+      { height: escape_attribute_value(size) },
+      { stroke: escape_attribute_value(color) },
       {
-        "stroke-width": absoluteStrokeWidth ? Number(strokeWidth) * 24 / Number(size) : strokeWidth
+        "stroke-width": escape_attribute_value(absoluteStrokeWidth ? Number(strokeWidth) * 24 / Number(size) : strokeWidth)
       },
       {
-        "class": mergeClasses("lucide-icon", "lucide", name ? `lucide-${name}` : "", $$sanitized_props.class)
+        class: escape_attribute_value(mergeClasses("lucide-icon", "lucide", name ? `lucide-${name}` : "", $$props.class))
       }
     ],
-    false,
-    false,
-    ""
-  )}><!--[-->`;
-  for (let $$index = 0; $$index < each_array.length; $$index++) {
-    const $$item = each_array[$$index];
-    const [tag, attrs] = $$item;
-    $$payload.out += "<!--[-->";
-    $$payload.out += `<!--[-->`;
-    if (tag)
-      element(
-        $$payload,
-        tag,
-        () => {
-          $$payload.out += `${spread_attributes([attrs], false, false, "")}`;
-        },
-        () => {
-        }
-      );
-    $$payload.out += `<!--]-->`;
-    $$payload.out += "<!--]-->";
-  }
-  $$payload.out += "<!--]-->";
-  $$payload.out += `<!--[-->`;
-  slot($$payload, $$props.children, {});
-  $$payload.out += `<!--]--></svg>`;
-  bind_props($$props, {
-    name,
-    color,
-    size,
-    strokeWidth,
-    absoluteStrokeWidth,
-    iconNode,
-    mergeClasses
-  });
-  pop();
-}
+    {}
+  )}>${each(iconNode, ([tag, attrs]) => {
+    return `${((tag$1) => {
+      return tag$1 ? `<${tag}${spread([escape_object(attrs)], {})}>${is_void(tag$1) ? "" : ``}${is_void(tag$1) ? "" : `</${tag$1}>`}` : "";
+    })(tag)}`;
+  })}${slots.default ? slots.default({}) : ``}</svg>`;
+});
 export {
   Icon as I
 };

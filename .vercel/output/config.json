@@ -1,19 +1,28 @@
 {
-	"version": 3,
-	"routes": [
-		{
-			"src": "/_app/immutable/.+",
-			"headers": {
-				"cache-control": "public, immutable, max-age=31536000"
-			}
-		},
-		{
-			"handle": "filesystem"
-		},
-		{
-			"src": "/.*",
-			"dest": "/fn"
-		}
-	],
-	"overrides": {}
+  "version": 3,
+  "routes": [
+    {
+      "src": "/_app/immutable/.+",
+      "headers": {
+        "cache-control": "public, immutable, max-age=31536000"
+      }
+    },
+    {
+      "handle": "error"
+    },
+    {
+      "status": 404,
+      "src": "^(?!/api).*$",
+      "dest": "/404.html"
+    },
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "/.*",
+      "dest": "/fn"
+    }
+  ],
+  "overrides": {},
+  "crons": []
 }

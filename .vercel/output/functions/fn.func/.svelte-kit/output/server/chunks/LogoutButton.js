@@ -1,22 +1,16 @@
-import { b as pop, p as push } from "./index3.js";
+import { c as create_ssr_component, v as validate_component } from "./ssr.js";
 import "./HeaderNav.svelte_svelte_type_style_lang.js";
 import { B as Button } from "./Button.js";
 import "./index.js";
 import "devalue";
 import "uniqid";
-function LogoutButton($$payload, $$props) {
-  push();
-  $$payload.out += `<form method="POST" action="/api/auth/logout"><!--[-->`;
-  Button($$payload, {
-    element: "button",
-    type: "submit",
-    children: ($$payload2, $$slotProps) => {
-      $$payload2.out += `Logout`;
+const LogoutButton = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  return `<form method="POST" action="/api/auth/logout">${validate_component(Button, "Button").$$render($$result, { element: "button", type: "submit" }, {}, {
+    default: () => {
+      return `Logout`;
     }
-  });
-  $$payload.out += `<!--]--></form>`;
-  pop();
-}
+  })}</form>`;
+});
 export {
   LogoutButton as L
 };

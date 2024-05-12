@@ -1,1 +1,0 @@
-import{E as c,I as r,J as f}from"./runtime.DDjRgbeA.js";function i(a,t,n){let e,o;c(()=>{e!==(e=t())&&(o&&(f(o),o=null),e&&(o=r(()=>n(e))))})}const p=Object.freeze(Object.defineProperty({__proto__:null},Symbol.toStringTag,{value:"Module"}));export{p as _,i as c};
