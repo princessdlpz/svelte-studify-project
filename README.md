@@ -6,12 +6,12 @@ Studify is a Spotify-inspired app designed for students to create personalized s
 You need to install the following dependencies to run the project
 
 ```bash
-npm install pkce-gen spotify-api@0.0.25 lucide-svelte @fontsource/metropolis nodemon tailwindcss @unsass/breakpoint@2.4.0 modern-normalize@2.0.0 nprogress
+npm install 
 ```
 
 ## Logging in using Spotify Authentication
 
-To be able to access the app you may use this spotify cedentials, or your own credentials (to show your customized playlists)
+To be able to access the app you may use this spotify cedentials
 
 ```bash
 Email: rzuhime.habbo@gmail.com
@@ -20,7 +20,7 @@ Password: Password123
 
 ## Starting the server
 
-run npm run dev to start the project
+run 'npm run dev' to start the project
 
 ```bash
 npm run dev
