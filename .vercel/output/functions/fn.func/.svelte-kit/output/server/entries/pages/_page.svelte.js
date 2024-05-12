@@ -9,7 +9,6 @@ function _page($$payload, $$props) {
   push();
   let data = $$props["data"];
   let sections = [];
-  console.log();
   {
     if (data.newReleases) {
       sections.push({
