@@ -23,7 +23,8 @@ const config = {
       $utils: './src/utils',
       $assets: './src/assets',
       $helpers: './src/lib/helpers',
-      $stores: './src/lib/stores', 
+      $stores: './src/lib/stores',
+	  $lib : './src/lib', 
     }
   },
 
