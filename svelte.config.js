@@ -1,17 +1,17 @@
-import { mdsvex } from 'mdsvex';
 import adapter from '@sveltejs/adapter-vercel';
-import preprocess from 'svelte-preprocess';
+import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
 
 const config = {
-  preprocess: [
-    preprocess({
-      scss: {
-        prependData: '@use "src/styles/functions";@use "@unsass/breakpoint";'
-      }
-    }),
-    mdsvex()
-  ],
+  // preprocess: [
+  //   preprocess({
+  //     scss: {
+  //       prependData: '@use "src/styles/functions";@use "@unsass/breakpoint";'
+  //     }
+  //   }),
+  //   mdsvex()
+  // ],
+  preprocess: vitePreprocess(),
 
   kit: {
     adapter: adapter(), 
