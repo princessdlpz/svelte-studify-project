@@ -24,6 +24,8 @@
 </div>
 
 <style lang="scss">
+	@use "src/styles/functions";
+	@use "@unsass/breakpoint";
 	.modal {
 		display: none;
 		&:global(.is-open) {

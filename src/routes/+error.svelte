@@ -51,6 +51,8 @@
 </div>
 
 <style lang="scss">
+	@use "src/styles/functions"; @use "@unsass/breakpoint";
+
 	.content {
 		text-align: center;
 	}

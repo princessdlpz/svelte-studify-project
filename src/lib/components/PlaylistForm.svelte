@@ -75,6 +75,8 @@
 </form>
 
 <style lang="scss">
+	@use "src/styles/functions";
+	@use "@unsass/breakpoint";
 	form {
 		max-width: 400px;
 		.field {

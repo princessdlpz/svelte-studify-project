@@ -302,6 +302,8 @@
 </div>
 
 <style lang="scss">
+	@use "src/styles/functions";
+	@use "@unsass/breakpoint";
 	.tracks {
 		&:focus {
 			outline: 2px solid var(--accent-color);

@@ -48,6 +48,8 @@
 </ItemPage>
 
 <style lang="scss">
+	@use "src/styles/functions"; @use "@unsass/breakpoint";
+
 	.meta {
 		font-size: functions.toRem(13);
 		font-weight: 600;

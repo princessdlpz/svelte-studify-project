@@ -25,8 +25,10 @@
 </div>
 
 <style lang="scss">
+	@use "src/styles/functions"; @use "@unsass/breakpoint";
+
 	:global(body) {
-		background-image: url('src/assets/mesh-25.png');
+		background-image: url('mesh-25.png');
 		background-repeat: no-repeat; 
     	background-size: cover; 
 		//background-image: linear-gradient(230deg, var(--sidebar-color), var(--bg-color));

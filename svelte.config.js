@@ -6,7 +6,7 @@ const config = {
   // preprocess: [
   //   preprocess({
   //     scss: {
-  //       prependData: '@use "src/styles/functions";@use "@unsass/breakpoint";'
+  //       prependData: '@use "src/styles/functions"; @use "@unsass/breakpoint";@use "@unsass/breakpoint";'
   //     }
   //   }),
   //   mdsvex()

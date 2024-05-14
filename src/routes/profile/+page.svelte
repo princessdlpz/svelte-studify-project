@@ -62,6 +62,7 @@
 </div>
 
 <style lang="scss">
+	@use "src/styles/functions"; @use "@unsass/breakpoint";
 	#profile-page {
 		:global(.banner) {
 			align-items: center;

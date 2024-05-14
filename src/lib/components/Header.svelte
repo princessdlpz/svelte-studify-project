@@ -68,6 +68,8 @@
 </div>
 
 <style lang="scss">
+	@use "@unsass/breakpoint";
+	@use "src/styles/functions";
 	.search-form {
 		margin-left: 20px;
 		display: none;

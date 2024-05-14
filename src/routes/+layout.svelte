@@ -93,6 +93,8 @@
 </div>
 
 <style lang="scss">
+	@use "@unsass/breakpoint";
+	
 	#main {
 		display: flex;
 		:global(html.no-js) & {

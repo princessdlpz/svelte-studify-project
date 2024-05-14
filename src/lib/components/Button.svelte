@@ -36,6 +36,8 @@
 </svelte:element>
 
 <style lang="scss">
+	@use "src/styles/functions";
+	@use "@unsass/breakpoint";
 	.button {
 		display: inline-block;
 		border: none;

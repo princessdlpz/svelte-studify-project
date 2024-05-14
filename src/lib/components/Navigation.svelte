@@ -22,11 +22,11 @@
 			label: 'Home',
 			icon: Home
 		},
-		{
-			path: '/search',
-			label: 'Search',
-			icon: Search
-		},
+		// {
+		// 	path: '/search',
+		// 	label: 'Search',
+		// 	icon: Search
+		// },
 		{
 			path: '/playlists',
 			label: 'Playlists',
@@ -155,11 +155,14 @@
 					</ul>
 				</div>
 			{/if}
+				<h2> Hi </h2>
 		</div>
 	</nav>
 </div>
 
 <style lang="scss">
+	@use "src/styles/functions";
+	@use "@unsass/breakpoint";
 	.nav-content {
 		.overlay {
 			position: fixed;

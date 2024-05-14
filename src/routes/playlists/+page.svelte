@@ -62,6 +62,7 @@
 </Modal>
 
 <style lang="scss">
+	@use "src/styles/functions"; @use "@unsass/breakpoint";
 	.content {
 		padding-bottom: 60px;
 		.title {

@@ -22,6 +22,7 @@
 {/if}
 
 <style lang="scss">
+	@use "src/styles/functions"; @use "@unsass/breakpoint";
 	.items {
 		display: grid;
 		grid-template-columns: 1fr;

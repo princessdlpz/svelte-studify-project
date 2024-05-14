@@ -96,6 +96,7 @@
 </ItemPage>
 
 <style lang="scss">
+	@use "src/styles/functions"; @use "@unsass/breakpoint";
 	.section {
 		margin-bottom: 40px;
 		.section-title {

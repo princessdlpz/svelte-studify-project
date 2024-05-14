@@ -55,6 +55,7 @@
 {/if}
 
 <style lang="scss">
+	@use "src/styles/functions"; @use "@unsass/breakpoint";
 	h1 {
 		font-size: functions.toRem(28);
 	}

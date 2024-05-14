@@ -73,7 +73,8 @@
   {/each}
   
   <style lang="scss">
-	
+	@use "src/styles/functions"; @use "@unsass/breakpoint";
+
 	.content-row {
 	  margin-bottom: 40px;
 	  background-image: url('./src/assets/mesh-25.png');

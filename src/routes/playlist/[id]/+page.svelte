@@ -180,6 +180,7 @@
 </Modal>
 
 <style lang="scss">
+	@use "src/styles/functions"; @use "@unsass/breakpoint";
 	.empty-playlist {
 		text-align: center;
 		margin-top: 40px;
