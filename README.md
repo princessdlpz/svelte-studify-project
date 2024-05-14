@@ -26,3 +26,6 @@ run 'npm run dev' to start the project
 npm run dev
 ```
 
+## Env file is removed by Github
+the .env file will be sent separately
+
