@@ -1,6 +1,5 @@
 import { mdsvex } from 'mdsvex';
-import adapter from '@sveltejs/adapter-vercel'; // Import the adapter
-
+import adapter from '@sveltejs/adapter-vercel';
 import preprocess from 'svelte-preprocess';
 
 
@@ -24,7 +23,7 @@ const config = {
       $assets: './src/assets',
       $helpers: './src/lib/helpers',
       $stores: './src/lib/stores',
-	  $lib : './src/lib', 
+	    $lib : './src/lib', 
     }
   },
 
