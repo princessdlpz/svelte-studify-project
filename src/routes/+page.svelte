@@ -2,6 +2,8 @@
 	import { Button, Card } from '$components';
 	import type { PageData } from './$types';
 	import { writable } from 'svelte/store'; 
+	import bg from '$assets/mesh.png';
+
   
 	export let data: PageData;
   
@@ -77,7 +79,7 @@
 
 	.content-row {
 	  margin-bottom: 40px;
-	  background-image: url('./src/assets/mesh-25.png');
+	  background-image: url('./src/assets/mesh.png');
 	  background-blend-mode: color-dodge;
 	  .content-row-header {
 		display: flex;

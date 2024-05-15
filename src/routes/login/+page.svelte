@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { Button } from '$components';
 	import cover from '$assets/concept.png';
+	import  bg  from '$assets/mesh.png';
 </script>
 
 <div class="wrapper">
@@ -25,15 +26,16 @@
 </div>
 
 <style lang="scss">
-	@use "src/styles/functions"; @use "@unsass/breakpoint";
-
+	@use "src/styles/functions"; 
+	@use "@unsass/breakpoint";
+	
 	:global(body) {
-		background-image: url('mesh-25.png');
-		background-repeat: no-repeat; 
-    	background-size: cover; 
-		//background-image: linear-gradient(230deg, var(--sidebar-color), var(--bg-color));
+		background-image: url('./src/assets/mesh.png');
+		background-repeat: no-repeat;
+		background-size: cover;
 		height: 100vh;
 	}
+
 	.wrapper {
 		display: flex;
 		width: 100%;

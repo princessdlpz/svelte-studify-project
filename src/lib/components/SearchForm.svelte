@@ -29,8 +29,8 @@
 </form>
 
 <style lang="scss">
-	@use "src/styles/functions";
-	@use "@unsass/breakpoint";
+		@use "src/styles/functions"; 
+		@use "@unsass/breakpoint";
 	.search-input-wrapper {
 		position: relative;
 		display: flex;

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Home, Search, ListMusic, Menu, X, type Icon } from 'lucide-svelte';
+	import { Home, Search, ListMusic, ListChecks, Menu, X, type Icon } from 'lucide-svelte';
 	import { IconButton } from '$components';
 	import { tick, type ComponentType } from 'svelte';
 	import { page } from '$app/stores';
@@ -22,11 +22,11 @@
 			label: 'Home',
 			icon: Home
 		},
-		// {
-		// 	path: '/search',
-		// 	label: 'Search',
-		// 	icon: Search
-		// },
+		 {
+		 	path: '/todo',
+		 	label: 'To-Do List',
+			icon: ListChecks
+		},
 		{
 			path: '/playlists',
 			label: 'Playlists',
@@ -69,6 +69,9 @@
 	beforeNavigate(() => {
 		isMobileMenuOpen = false;
 	});
+
+
+
 </script>
 
 <svelte:head>
@@ -155,8 +158,6 @@
 					</ul>
 				</div>
 			{/if}
-				<h2> Hi </h2>
-		</div>
 	</nav>
 </div>
 
