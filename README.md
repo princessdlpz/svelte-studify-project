@@ -3,12 +3,6 @@
 Studify is a Spotify-inspired app designed for students to discover new tracks and albums, create music playlists, and find the perfect soundtrack for their study sessions.
 It also features a to-do list function so you can easily monitor your tasks while listening to your favorite songs.
 
-You may run a demo of this app here [Studify](https://svelte-studify-project.vercel.app/) and you may use the following credentials to access the app
-```bash
-Email: rzuhime.habbo@gmail.com
-Password: Password123
-```
-
 ## Running this App Locally
 You need to clone and install the following dependencies to run the project
 
