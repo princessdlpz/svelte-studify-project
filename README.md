@@ -17,15 +17,6 @@ git clone https://github.com/princessdlpz/svelte-project.git
 
 npm install --force
 ```
-## Logging in using Spotify Authentication
-
-To be able to access the app you may use these spotify cedentials, 
-
-```bash
-Email: rzuhime.habbo@gmail.com
-Password: Password123
-```
-
 If you want to use your own spotify credentials, you will need to <br>
 • Log into the [Spotify for Developers](https://developer.spotify.com/) - Dashboard using your Spotify account <br>
 • Create an app. These will be required for API authorization to obtain an access token. <br>
